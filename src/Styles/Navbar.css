@@ -97,3 +97,12 @@ body{
     background-color:rgb(45, 45, 45);
     color: whitesmoke;
 }
+
+@media screen and (max-width:500px){
+    .navbar{
+        padding: 0px 20px;
+    }
+    .nav-btn{
+        padding: 10px 15px;
+    }
+}

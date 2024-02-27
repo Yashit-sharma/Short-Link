@@ -11,37 +11,37 @@ export default function Body({ setter, initial, Loading, setLoading, setData, Da
   const [copy, setcopy] = useState(false)
   const token = 'e0f2e5bff3c370fa68595be2622bbc765098702d';
   const fetchData = async () => {
-    // setData(initial);
-    // setTimeout(() => {
-    //   setLoading(false);
-    // }, 1000);
+    setData(initial);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
     
-    // setresponse(true);
-    // setter('');
+    setresponse(true);
+    setter('');
 
-    const bitlyUrl = 'https://api-ssl.bitly.com/v4/shorten';
-    const accessToken = token;
-    const longUrl = initial;
-    const axiosConfig = {
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-        'Content-Type': 'application/json',
-      },
-    };
-    const data = {
-      long_url: longUrl,
-    };
-    axios.post(bitlyUrl, data, axiosConfig)
-      .then(response => {
-        console.log('Shortened URL:', response.data.link);
-        setData(response.data.link);
-        setLoading(false);
-        setresponse(true);
-        setter('');
-      })
-      .catch(error => {
-        console.error('Error:', error.message);
-      });
+    // const bitlyUrl = 'https://api-ssl.bitly.com/v4/shorten';
+    // const accessToken = token;
+    // const longUrl = initial;
+    // const axiosConfig = {
+    //   headers: {
+    //     Authorization: `Bearer ${accessToken}`,
+    //     'Content-Type': 'application/json',
+    //   },
+    // };
+    // const data = {
+    //   long_url: longUrl,
+    // };
+    // axios.post(bitlyUrl, data, axiosConfig)
+    //   .then(response => {
+    //     console.log('Shortened URL:', response.data.link);
+    //     setData(response.data.link);
+    //     setLoading(false);
+    //     setresponse(true);
+    //     setter('');
+    //   })
+    //   .catch(error => {
+    //     console.error('Error:', error.message);
+    //   });
   };
   const hadnleUrl = (e) => {
     setter(e.target.value);
