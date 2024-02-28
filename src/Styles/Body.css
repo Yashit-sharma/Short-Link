@@ -43,28 +43,49 @@
     cursor: pointer;
     font-size: 18px;
     text-align: center;
-    padding: 10px 10px 0px 10px;
-    border-bottom: 1px dashed rgb(92, 251, 147);
-    color: rgb(92, 251, 147);
+    margin-right: 10px;
 }
 .about{
     padding: 0px 150px;
     text-align: justify;
     color:rgb(149, 200, 245);
-    font-size: 18px;
+    font-size: 20px;
 }
 
-@media screen and (max-width:500px) {
+
+@media screen and (max-width:969px){
     .about{
-        font-size: 15px;
+        padding: 0px 80px;
+    }
+}
+@media screen and (max-width:750px){
+    .about{
+        font-size: 16px;
+        padding: 0px 65px;
+    }
+}
+@media screen and (max-width:550px) {
+    p{
+        margin-bottom: 0.8rem;
+    }
+    .about{
+        font-size: 15.5px;
         padding: 0px 0px;
     }
     .center-body{
         width: 100%;
     }
     .main-body{
-        margin-top: 10px;
+        margin-top: 20px;
         gap: 30px;
         padding: 20px 40px;
     }
+}
+.gradient-text{
+  background-image: linear-gradient(220deg, rgb(81, 139, 255), rgb(43, 248, 173)); /* Adjust colors and angle as needed */
+  background-size: 100%; /* Ensure gradient covers the text area */
+  background-clip: text; /* WebKit-specific property */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* WebKit-specific property */
+  font-size: 2em; /* Adjust font size as desired */
 }

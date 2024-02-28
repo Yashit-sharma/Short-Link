@@ -7,6 +7,7 @@ input::placeholder {
   }
 body{
     background: rgb(37.5, 37.5, 37.5);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .navbar{
     height: 80px;
@@ -17,7 +18,6 @@ body{
     height:100%;
     margin-bottom: 0rem;
     color: rgb(149, 200, 245);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: clamp(16px, 8vw, 45px);
 }
 .nav-btn{
@@ -29,10 +29,8 @@ body{
     border-radius: 2px;
     transition: all 0.3s ease;
 }
-.nav-btn:hover{
-    background-color: rgb(149, 200, 245);
-    color: black;
-    cursor: pointer;
+.nav-btn > p{
+    margin-block: 0rem;
 }
 .modal {
   opacity: 0; 
@@ -106,3 +104,11 @@ body{
         padding: 10px 15px;
     }
 }
+.gradient-text-nav{
+    background-image: linear-gradient(220deg, rgb(81, 139, 255), rgb(43, 248, 173));
+    background-size: 100%; /*Ensure gradient covers the text area */
+    background-clip: text; /* WebKit-specific property */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* WebKit-specific property */
+    font-size: 1.2em; 
+  }

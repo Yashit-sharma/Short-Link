@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import axios from 'axios';
 import '../Styles/Navbar.css'
 import close from '../assets/close.svg';
+import {motion} from 'framer-motion'
 export default function Navbar({setter,initial,setLoading,setData,setresponse}) {
   const token = 'e0f2e5bff3c370fa68595be2622bbc765098702d';
   const [isopen, setisopen] = useState(false);
@@ -58,10 +59,15 @@ export default function Navbar({setter,initial,setLoading,setData,setresponse}) 
   <>
    <div className="navbar">
     <div className="nav-logo">
-    <p>Short-Link</p>
+    <p className='gradient-text-nav'>Short-Link</p>
     </div>
     <div className="nav-btns">
-    <button className='nav-btn' onClick={()=>{handleOpen()}}>Get Started</button>
+    <motion.button 
+    whileHover={{scale : 0.9}}
+    transition={{duration : 0.001}}
+    className='nav-btn' onClick={()=>{handleOpen()}}>
+    <p>Get Started</p>
+    </motion.button>
     <dialog id= {isopen ? 'input-modal' : ''} className={`modal ${isopen ? 'modal-animated' : ''}`} open={isopen}>
       <div className="modal-cont">
       <input value={initial} onChange={(e)=>hadnleUrl(e)} onKeyDown={(e)=>{hadnleSubmit(e)}} className='modal-input' id={isopen ? 'border' : ''} placeholder='Please enter your Link here'></input>

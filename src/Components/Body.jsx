@@ -69,7 +69,7 @@ export default function Body({ setter, initial, Loading, setLoading, setData, Da
             <button onClick={() => { handleSubmit() }} className='upload-btn'><img src={upload} alt="" /></button>
           </div>
          {response && <CopyToClipboard text={Data} onCopy={() => { handleCopy() }}>
-            <div className='short-link'>{Data}</div>
+            <div className='short-link gradient-text'>{Data}</div>
           </CopyToClipboard>}
           {!Loading && <div className="about">
             <motion.p
